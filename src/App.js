@@ -35,9 +35,17 @@ const App = () => {
 
     const myVideos = videos.map((video) => {
       console.log(video.public_id);
-      const newVideo = cld.video(video.public_id, analytics: { 
-        events: ['play', 'pause', 'ended', { type: 'percentsplayed', percents: [10, 40, 70, 90] }, 'error']
-      } );
+      const newVideo = cld.video(video.public_id, {
+        analytics: {
+          events: [
+            "play",
+            "pause",
+            "ended",
+            { type: "percentsplayed", percents: [10, 40, 70, 90] },
+            "error",
+          ],
+        },
+      });
 
       newVideo
         .resize(
