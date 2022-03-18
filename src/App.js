@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        "http://394232959681238:rpEav_7-j09FtUQgWOVp69WmTW4@res.cloudinary.com/ncfiveguysuk/video/list/test.json"
+        "https://394232959681238:rpEav_7-j09FtUQgWOVp69WmTW4@res.cloudinary.com/ncfiveguysuk/video/list/test.json"
       )
       .then((res) => {
         setVideos(res.data.resources);
